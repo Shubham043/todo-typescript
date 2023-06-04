@@ -4,11 +4,10 @@ import NoteModel from '../models/notes'; // Import the Note model
 // Controller for creating a new note
 export const createNote = async (req: Request, res: Response) => {
   try {
-    const {  title, text } = req.body;
+    const { title, text } = req.body;
 
     // Create a new note using the Note model
     const newNote = await NoteModel.create({
-  
       title,
       text,
     });
